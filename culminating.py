@@ -1,17 +1,11 @@
-import matplotlib as plt
+import os
+import matplotlib.pyplot as plt
+
 folder = os.getcwd()
 WeightGoal = int(input("What is the weight goal you are trying to achieve?"))
 print("The tracking timeframe is set to 7 days.")
 
-oneW = int(input("What is your weight on the 1st day?"))
-twoW = int(input("What is your weight on the 2nd day?"))
-threeW = int(input("What is your weight on the 3rd day?"))
-fourW = int(input("What is your weight on the 4th day?"))
-fiveW = int(input("What is your weight on the 5th day?"))
-sixW = int(input("What is your weight on the 6th day?"))
-sevenW = int(input("What is your weight on the 7th day?"))
-
-dates = [day 1, day 2, day 3, day 4, day 5, day 6, day 7]
+dates = ['day 1', 'day 2', 'day 3', 'day 4', 'day 5', 'day 6', 'day 7']
 weights = [40, 45, 70, 20, 60, 65, 40]
 
 plt.scatter(dates, weights)
@@ -20,8 +14,22 @@ plt.xlabel('Day')
 plt.ylabel('Weight')
 plt.legend(['Weight', 'WeightGoal'])
 plt.grid(True)
-plt.axhline(y=WeightGoal , color='r', linestyle='-')
+plt.axhline(y=WeightGoal, color='r', linestyle='-')
 plt.show()
+
+weightDay = []
+for i in range(1, 8):
+  weightDay.append(i)
+print("what is your weight on day", i "?")
+#fix
+
+oneW = int(input("What is your weight on the 1st day?"))
+twoW = int(input("What is your weight on the 2nd day?"))
+threeW = int(input("What is your weight on the 3rd day?"))
+fourW = int(input("What is your weight on the 4th day?"))
+fiveW = int(input("What is your weight on the 5th day?"))
+sixW = int(input("What is your weight on the 6th day?"))
+sevenW = int(input("What is your weight on the 7th day?"))
 
 print("Your information is currently being saved to a file named 'userWeightInfo.csv'.")
 folderName = input("Which existing folder would you like to assign the file to? ")
