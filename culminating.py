@@ -12,24 +12,15 @@ plt.scatter(dates, weights)
 plt.title('Tracker Graph')
 plt.xlabel('Day')
 plt.ylabel('Weight')
-plt.legend(['Weight', 'WeightGoal'])
+plt.legend(['Weight', 'WeightGoal (red)'])
 plt.grid(True)
 plt.axhline(y=WeightGoal, color='r', linestyle='-')
 plt.show()
 
 weightDay = []
 for i in range(1, 8):
-  weightDay.append(i)
-print("what is your weight on day", i "?")
-#fix
-
-oneW = int(input("What is your weight on the 1st day?"))
-twoW = int(input("What is your weight on the 2nd day?"))
-threeW = int(input("What is your weight on the 3rd day?"))
-fourW = int(input("What is your weight on the 4th day?"))
-fiveW = int(input("What is your weight on the 5th day?"))
-sixW = int(input("What is your weight on the 6th day?"))
-sevenW = int(input("What is your weight on the 7th day?"))
+weight = int(input("how much did you weight on day {i} ?")
+#uses an appended list to ask user's weight for 7 days
 
 print("Your information is currently being saved to a file named 'userWeightInfo.csv'.")
 folderName = input("Which existing folder would you like to assign the file to? ")
