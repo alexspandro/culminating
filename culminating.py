@@ -2,11 +2,11 @@ import os
 import matplotlib.pyplot as plt
 
 weightGoal = int(input("What is the weight goal, in pounds (lbs), you are trying to achieve? "))
-print("The tracking timeframe is set to 7 days.")
+print("The tracker is set to track the next 7 days.")
 
 weightDay = []
 for i in range(1, 8):
-    weight = int(input(f"How much did you weigh on day {i}? "))
+    weight = int(input(f"How many lbs did you weigh on day {i}? "))
     weightDay.append(weight)
 
 dates = ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7']
