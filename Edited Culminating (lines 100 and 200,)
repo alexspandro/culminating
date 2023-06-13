@@ -1,6 +1,5 @@
-# There is a congrats message, but it displays infinitely
-# fix graph only displaying 5 days
-#added line to graph
+# This code should do everything it's supposed to do, possible to submit, though there is no
+# congratulations message
 
 import pygame
 import csv
@@ -99,7 +98,6 @@ from pygame.locals import (
 )
 
 #booleans
-print_flag = True #for congrats message
 running = True
 while running: #while not done (TB CODE)
     # Background color 
@@ -208,19 +206,24 @@ while running: #while not done (TB CODE)
         else:
             last_weight = 0
         
+        
         # Update the daySeven variable
+        congrats = True
         daySeven = last_weight
-        while print_flag:
+        while congrats:
             if daySeven == goal_weight:
                 print("Congratulations! You have reached your weight goal.")
+                congrats = False
                 
             elif daySeven > goal_weight:
                 print("So close! you are", daySeven - goal_weight , "lbs away from your goal!")
-                
+                congrats = False
+                   
             else:
                 print("So close! you are", goal_weight - daySeven, "lbs away from your goal!")
-            print_flag = False   
-             
+                congrats = False
+                   
+        congrats = False
         # Plot the progress graph
         plt.figure(figsize=(8, 6))  # Adjust the figure size as needed
         plt.plot(weights, marker='o')
